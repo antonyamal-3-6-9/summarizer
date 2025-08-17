@@ -70,10 +70,9 @@ export default function App() {
           body: JSON.stringify({
             to: recipientEmail,
             subject: "AI Generated Summary",
-            html: summary,
+            text: summary,
           }),
         });
-
         const data = await response.json();
         console.log(data);
 
