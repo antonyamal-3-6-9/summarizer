@@ -21,6 +21,7 @@ export default function App() {
 
 
 
+
   // --- Handlers ---
   const handleGenerateSummary = async () => {
     if (!transcript.trim() || !prompt.trim()) {
@@ -107,6 +108,7 @@ export default function App() {
       const text = e.target.result;
       setTranscript(text);
       setMessage(`Successfully loaded ${file.name}`);
+      setInputType('paste'); 
       setError(null);
     };
     reader.onerror = (e) => {
