@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   try {
     const { to, subject, text } = req.body;
 
-    if (!to || !subject || (!html && !text)) {
+    if (!to || !subject || (!text)) {
       return res.status(400).json({
         error: "Missing required fields: 'to', 'subject', and either 'html' or 'text'",
       });

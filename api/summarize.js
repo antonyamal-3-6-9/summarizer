@@ -31,7 +31,7 @@ export default async function handler(req, res) {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "x-goog-api-key": process.env.API_KEY  
+                "x-goog-api-key": process.env.API_KEY 
             },
             body: JSON.stringify(payload),
         });
